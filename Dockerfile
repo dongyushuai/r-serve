@@ -12,8 +12,7 @@ RUN if [ "${doi_network}" = true ]; then \
 		echo "\\n\\nca-certificate = /usr/lib/ssl/certs/DOIRootCA.crt" >> /etc/wgetrc; \
 	fi
 
-RUN install.r Rserve \
-	&& rm -rf /tmp/downloaded_packages/ /tmp/*.rds
+RUN R -e "install.packages('Rserve')"
 
 ENV RSERVE_HOME /opt/rserve
 
