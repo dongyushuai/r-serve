@@ -1,0 +1,5 @@
+.First <- function() {
+        # add some libraries?
+
+        setwd("/opt/rserve/work")
+}
